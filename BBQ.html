@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Smokes - We Grill at Your Doorstep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f3e9;
+            color: #4a2c2a;
+        }
+
+        .hero {
+            background-color: #d35400;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .menu-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #d35400;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        .footer-link {
+            color: #e67e22;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        .ingredients {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients p {
+            margin: 0;
+        }
+    </style>
+    <script>
+        function showIngredients(ingredients) {
+            const ingredientBox = document.getElementById("ingredient-box");
+            ingredientBox.style.display = "block";
+            ingredientBox.innerHTML = `<p><strong>Ingredients:</strong> ${ingredients}</p>`;
+        }
+    </script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="text-center">
+            <h1>Holy Smokes</h1>
+            <p>We Grill at Your Doorstep</p>
+            <a href="#menu" class="cta-button">Explore Our Menu</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Holy Smokes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p>We bring the finest barbecue experience to your outdoor events. With fresh ingredients, expert chefs, and a passion for grilling, we make your gatherings unforgettable.</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Menu</h2>
+            <div class="row mt-4">
+                <!-- Vegetarian Starters -->
+                <div class="col-md-4 menu-item">
+                    <h4>Vegetarian Starters</h4>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Paneer Tikka: Paneer, yogurt, garlic, ginger paste, red chili powder, garam masala, lemon juice, mustard oil, cilantro.')">Paneer Tikka</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Tandoori Paneer: Paneer, yogurt, garlic, ginger paste, Kashmiri chili powder, cumin, garam masala, turmeric, mustard oil, lemon juice.')">Tandoori Paneer</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Grilled Corn on the Cob: Corn, butter, lemon juice, chaat masala, salt, black pepper.')">Grilled Corn on the Cob</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Tandoori Mushroom: Mushrooms, yogurt, garlic, ginger paste, Kashmiri chili powder, cumin, garam masala, mustard oil, lemon juice.')">Tandoori Mushroom</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Tandoori Corn: Corn, yogurt, garlic, ginger paste, Kashmiri chili powder, cumin, garam masala, mustard oil, lemon juice.')">Tandoori Corn</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Tandoori Pineapple: Pineapple, yogurt, garlic, ginger paste, garam masala, red chili powder, lemon juice.')">Tandoori Pineapple</a></p>
+                </div>
+
+                <!-- Non-Vegetarian Starters -->
+                <div class="col-md-4 menu-item">
+                    <h4>Non-Vegetarian Starters</h4>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Chicken Leg Piece: Chicken drumsticks, yogurt, ginger-garlic paste, red chili powder, garam masala, lemon juice, mustard oil.')">Chicken Leg Piece</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Tandoori Chicken: Bone-in chicken, yogurt, ginger-garlic paste, Kashmiri chili powder, cumin, coriander, garam masala, turmeric, mustard oil, lemon juice.')">Tandoori Chicken</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Prawns Tikka: Fresh prawns, yogurt, garlic, ginger paste, red chili powder, turmeric, garam masala, lemon juice.')">Prawns Tikka</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Chicken Tikka: Boneless chicken, yogurt, ginger-garlic paste, red chili powder, turmeric, garam masala, mustard oil.')">Chicken Tikka</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Malai Chicken Tikka: Chicken, cream, yogurt, ginger-garlic paste, cardamom, garam masala, saffron.')">Malai Chicken Tikka</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Hariyali Chicken Tikka: Chicken, green yogurt marinade, coriander, mint, garlic, ginger.')">Hariyali Chicken Tikka</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Whole Chicken: Whole chicken, yogurt, ginger-garlic paste, red chili powder, garam masala, lemon juice.')">Whole Chicken</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Tandoori Fish Tikka: Fish, yogurt, garlic, ginger paste, garam masala, turmeric, red chili powder, lemon juice.')">Tandoori Fish Tikka</a></p>
+                </div>
+
+                <!-- Combo Options -->
+                <div class="col-md-4 menu-item">
+                    <h4>Combo Options</h4>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Vegetarian Combo: Paneer Tikka, Grilled Corn, Malai Paneer Tikka.')">Vegetarian Combo</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Non-Veg Combo: Chicken Leg Piece, Chicken Malai Tikka, Seekh Kebab, Prawns Tikka.')">Non-Veg Combo</a></p>
+                    <p><a href="#" class="cta-button" onclick="showIngredients('Mixed Combo: Chicken Leg Piece, Paneer Tikka, Fish Tikka, Seekh Kebab.')">Mixed Combo</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container text-center">
+            <h2>Our Services</h2>
+            <p>We cater to outdoor events of all sizes, from family gatherings to corporate events. Let us handle the food while you enjoy the occasion!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or want to book us for your next event, feel free to reach out!</p>
+            <p>Email: <a href="mailto:info@holysmokes.com" class="footer-link">info@holysmokes.com</a></p>
+            <p>Phone: +1 123 456 7890</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark text-white text-center">
+        <p>&copy; 2025 Holy Smokes. All rights reserved.</p>
+    </footer>
+
+    <div id="ingredient-box" class="ingredients"></div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
